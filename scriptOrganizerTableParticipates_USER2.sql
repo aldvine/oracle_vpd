@@ -4,7 +4,7 @@ EXECUTE ADMIN18.set_user_ctx_pkg.set_user;
 SELECT SYS_CONTEXT('USER_CTX','role') FROM DUAL;
 
 /** Affiche seulement ces informations */
-SELECT * FROM ADMIN18.PARTICPATES;
+SELECT * FROM ADMIN18.PARTICIPATES;
 
 /** Impossible d'insérer des participations */
 INSERT INTO ADMIN18.PARTICIPATES VALUES('EVENT2','USER2','07/10/2019');

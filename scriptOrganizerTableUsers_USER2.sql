@@ -13,13 +13,14 @@ UPDATE ADMIN18.USERS SET phone = '9999999999' WHERE idUser = 'USER3';
 UPDATE ADMIN18.USERS SET numberIdentification = 'TEST';
 
 SELECT idUser, numberIdentification FROM ADMIN18.USERS;
+
 /** Possible de changer ces infos*/
-UPDATE ADMIN18.USERS SET numberIdentification = 'TEST';
+UPDATE ADMIN18.USERS SET phone = '9999999999';
 
 COMMIT;
 
 /** Affiche le changement du numberIndentification*/
-SELECT idUser, numberIdentification FROM ADMIN18.USERS;
+SELECT idUser, phone FROM ADMIN18.USERS;
 
 /** Impossible de supprimer un user */
 DELETE FROM ADMIN18.USERS WHERE idUser = 'USER4';

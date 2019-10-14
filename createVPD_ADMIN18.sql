@@ -52,7 +52,8 @@ BEGIN
   policy_name => 'events_policy',
   function_schema => 'ADMIN18',
   policy_function => 'auth_events',
-  statement_types => 'select,insert,update,delete'
+  statement_types => 'select,insert,update,delete',
+  update_check => TRUE
 );
 END;
 /
@@ -109,7 +110,7 @@ BEGIN
   IF role = 'ADMIN18_ROLE_PARTICIPATE' THEN
     return_val := 'idUser=SYS_CONTEXT(''USER_CTX'',''idUser'')';
   ELSIF role = 'ADMIN18_ROLE_ORGANIZER' THEN
-    return_val := 'idEvent IN (SELECT idEvent FROM ADMIN18.EVENTS WHERE idUser = SYS_CONTEXT(''UTI_CTX'',''idUser''))';
+    return_val := 'idEvent IN (SELECT idEvent FROM ADMIN18.EVENTS WHERE idUser = SYS_CONTEXT(''USER_CTX'',''idUser''))';
   ELSE
     return_val := '1=1';
   END IF;

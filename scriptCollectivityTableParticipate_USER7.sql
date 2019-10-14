@@ -4,7 +4,7 @@ EXECUTE ADMIN18.set_user_ctx_pkg.set_user;
 SELECT SYS_CONTEXT('USER_CTX','role') FROM DUAL;
 
 /** Affiche l'ensemble des participations */
-SELECT * FROM ADMIN18.PARTICPATES;
+SELECT * FROM ADMIN18.PARTICIPATES;
 
 /** Impossible de supprimer les participations*/
 DELETE FROM ADMIN18.PARTICIPATES WHERE idUser = 'USER5';

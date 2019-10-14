@@ -13,7 +13,7 @@ SELECT idEvent,idUser FROM ADMIN18.EVENTS;
 
 /** Possibilité de faire un update sur n'importe quel EVENTS*/
 SELECT idEvent,idUser,placeEvent FROM ADMIN18.EVENTS;
-UPDATE ADMIN18.EVENTS SET placeEvent WHERE idEvent = 'EVENT4';
+UPDATE ADMIN18.EVENTS SET placeEvent = 'NANTES' WHERE idEvent = 'EVENT4';
 COMMIT;
 SELECT idEvent,idUser,placeEvent FROM ADMIN18.EVENTS;
 
