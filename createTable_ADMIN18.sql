@@ -24,7 +24,7 @@ CREATE TABLE EVENTS (
   nbReservedScenes number(10),
   nbReservedBooth number(10),
   comments varchar2(255),
-  canceled tinyint,
+  canceled number(1),
   CONSTRAINT ADMIN18_PK_EVENTS PRIMARY KEY (idEvent),
   CONSTRAINT ADMIN18_FK_EVENTS_USERS FOREIGN KEY (idUser)
   REFERENCES USERS (idUser)

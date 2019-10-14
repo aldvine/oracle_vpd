@@ -5,8 +5,8 @@ SELECT SYS_CONTEXT('USER_CTX','role') FROM DUAL;
 
 /** Insertion d'événement*/
 SELECT idEvent,idUser FROM ADMIN18.EVENTS;
-INSERT INTO EVENTS VALUES('EVENT4','USER3','12/10/2019','PARIS','Soliday','Festif',24000,4,10,'Festival de musique',0);
-INSERT INTO EVENTS VALUES('EVENT5','USER3','23/10/2019','PARIS','Activiste','Culturel',240000,6,31,'Festival polyculturel',0);
+INSERT INTO ADMIN18.EVENTS VALUES('EVENT4','USER3','12/10/2019','PARIS','Soliday','Festif',24000,4,10,'Festival de musique',0);
+INSERT INTO ADMIN18.EVENTS VALUES('EVENT5','USER3','23/10/2019','PARIS','Activiste','Culturel',240000,6,31,'Festival polyculturel',0);
 
 COMMIT;
 SELECT idEvent,idUser FROM ADMIN18.EVENTS;

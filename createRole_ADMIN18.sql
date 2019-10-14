@@ -71,13 +71,5 @@ CREATE OR REPLACE PACKAGE BODY set_user_ctx_pkg IS
 END set_user_ctx_pkg;
 /
 
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER1;
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER2;
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER3;
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER4;
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER5;
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER6;
-GRANT EXECUTE ON set_user_ctx_pkg.set_user TO USER7;
-
 COMMIT;
 /** FIN SCRIPT CREATION CONTEXT APPLICATION */
