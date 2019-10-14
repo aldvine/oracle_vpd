@@ -14,7 +14,7 @@ SELECT idUser FROM ADMIN18.USERS;
 
 /** Possibilité de faire un update sur n'importe quel user*/
 SELECT idUser,numberIdentification FROM ADMIN18.USERS;
-UPDATE ADMIN18.USERS SET numberIdentification = 'TEST2' WHERE idUser = "USER5";
+UPDATE ADMIN18.USERS SET numberIdentification = 'TEST2' WHERE idUser = 'USER5';
 
 COMMIT;
 
