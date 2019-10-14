@@ -21,12 +21,12 @@ COMMIT;
 SELECT idUser,numberIdentification FROM ADMIN18.USERS;
 
 /** Possibilité de supprimer n'importe quel USER*/
-DELETE FROM ADMIN18.USERS WHERE idUser = 'USER3';
+DELETE FROM ADMIN18.USERS WHERE idUser = 'USER7';
 
 COMMIT;
 
 SELECT idUser FROM ADMIN18.USERS;
 
-INSERT INTO ADMIN18.USERS VALUES('USER3','E348715H','organizer3','organizer3','Paris','3333333333');
+INSERT INTO ADMIN18.USERS VALUES('USER7','E347987R','collectivity7','collectivity7','Lyon','7777777777');
 
 COMMIT;
