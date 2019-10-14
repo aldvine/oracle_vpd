@@ -9,7 +9,7 @@ INSERT INTO ADMIN18.USERS VALUES('USER7','E347987R','collectivity7','collectivit
 
 COMMIT;
 
-/** Affiche l'ensembele des utilisateurs qui ont été insérés*/
+/** Affiche l'ensemble des utilisateurs qui ont été insérés*/
 SELECT idUser FROM ADMIN18.USERS;
 
 /** Possibilité de faire un update sur n'importe quel user*/
