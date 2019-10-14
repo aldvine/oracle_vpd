@@ -86,6 +86,11 @@ END;
 /
 
 BEGIN
+  DBMS_RLS.DROP_POLICY ('ADMIN18','PARTICIPATES','participate_select_policy');
+END;
+/
+
+BEGIN
   DBMS_RLS.ADD_POLICY (
   object_schema => 'ADMIN18',
   object_name => 'PARTICIPATES',
@@ -94,6 +99,20 @@ BEGIN
   policy_function => 'auth_participate',
   statement_types => 'select,insert,delete',
   update_check => TRUE
+);
+END;
+/
+
+BEGIN
+  DBMS_RLS.ADD_POLICY (
+  object_schema => 'ADMIN18',
+  object_name => 'PARTICIPATES',
+  policy_name => 'participate_select_policy',
+  function_schema => 'ADMIN18',
+  policy_function => 'auth_participate_select',
+  statement_types => 'select',
+  sec_relevant_cols => 'dateRegistre',
+  sec_relevant_cols_opt => dbms_rls.ALL_ROWS
 );
 END;
 /
@@ -111,6 +130,22 @@ BEGIN
     return_val := 'idUser=SYS_CONTEXT(''USER_CTX'',''idUser'')';
   ELSIF role = 'ADMIN18_ROLE_ORGANIZER' THEN
     return_val := 'idEvent IN (SELECT idEvent FROM ADMIN18.EVENTS WHERE idUser = SYS_CONTEXT(''USER_CTX'',''idUser''))';
+  ELSE
+    return_val := '1=1';
+  END IF;
+  RETURN return_val;
+END;
+/
+
+CREATE OR REPLACE FUNCTION auth_participate_select(schema_var IN VARCHAR2,table_var IN VARCHAR2)
+RETURN VARCHAR2
+IS
+  role VARCHAR2(400);
+  return_val VARCHAR2 (400);
+BEGIN
+  role := SYS_CONTEXT('USER_CTX','role');
+  IF role = 'ADMIN18_ROLE_COLLECTIVITY' THEN
+    return_val := 'idUser=SYS_CONTEXT(''USER_CTX'',''idUser'')';
   ELSE
     return_val := '1=1';
   END IF;

@@ -17,9 +17,11 @@ UPDATE ADMIN18.EVENTS SET placeEvent = 'NANTES' WHERE idEvent = 'EVENT4';
 COMMIT;
 SELECT idEvent,idUser,placeEvent FROM ADMIN18.EVENTS;
 
-/** Impossible de supprimer un EVENTS*/
+/** Posibilité de supprimer un EVENTS*/
 DELETE FROM ADMIN18.EVENTS WHERE idEvent = 'EVENT4';
 COMMIT;
 SELECT idEvent FROM ADMIN18.EVENTS;
+INSERT INTO ADMIN18.EVENTS VALUES('EVENT4','USER3','12/10/2019','PARIS','Soliday','Festif',24000,4,10,'Festival de musique',0);
+COMMIT;
 
 

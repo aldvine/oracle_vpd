@@ -6,7 +6,7 @@ SELECT SYS_CONTEXT('USER_CTX','role') FROM DUAL;
 /** Affiche seulement ces informations */
 SELECT idEvent FROM ADMIN18.EVENTS;
 
-/** Impossible de supprimer un EVENT*/
+/** Possibilité de supprimer un EVENT*/
 DELETE FROM ADMIN18.EVENTS WHERE idUser = 'USER2';
 
 /** Insertion des EVENTS*/
@@ -22,5 +22,6 @@ SELECT idEvent,canceled FROM ADMIN18.EVENTS;
 UPDATE ADMIN18.EVENTS SET canceled = 1 WHERE idEvent = 'EVENT10';
 COMMIT;
 SELECT idEvent,canceled FROM ADMIN18.EVENTS;
+
 /** Aucun changement sur les EVENTS des autres users*/
 UPDATE ADMIN18.EVENTS SET dateEvent = '22/10/2019' WHERE idEvent = 'EVENT4';

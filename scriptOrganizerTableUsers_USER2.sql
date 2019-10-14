@@ -4,7 +4,7 @@ EXECUTE ADMIN18.set_user_ctx_pkg.set_user;
 SELECT SYS_CONTEXT('USER_CTX','role') FROM DUAL;
 
 /** Affiche seulement ces informations */
-SELECT idUser FROM ADMIN18.USERS;
+SELECT * FROM ADMIN18.USERS;
 
 /** Impossible de changer le numero de téléphone d'un autre user */
 UPDATE ADMIN18.USERS SET phone = '9999999999' WHERE idUser = 'USER3';
@@ -19,8 +19,8 @@ UPDATE ADMIN18.USERS SET phone = '9999999999';
 
 COMMIT;
 
-/** Affiche le changement du numberIndentification*/
-SELECT idUser, phone FROM ADMIN18.USERS;
+/** Affiche le changement du phone */
+SELECT idUser,phone FROM ADMIN18.USERS;
 
 /** Impossible de supprimer un user */
 DELETE FROM ADMIN18.USERS WHERE idUser = 'USER4';

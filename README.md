@@ -10,8 +10,8 @@ Lancement des scripts :
 @scriptAdminTableEvents_USER1.sql
 
 @scriptOrganizerTableUsers_USER2.sql
-@scriptOrganizerTableEvents_USER2.sql
 @scriptOrganizerTableParticipates_USER2.sql
+@scriptOrganizerTableEvents_USER2.sql
 
 @scriptParticipateTableUsers_USER4.sql
 @scriptParticipateTableParticipates_USER4.sql
