@@ -44,13 +44,6 @@ GRANT ADMIN18_ROLE_PARTICIPATE TO USER5;
 GRANT ADMIN18_ROLE_PARTICIPATE TO USER6;
 GRANT ADMIN18_ROLE_COLLECTIVITY TO USER7;
 
-GRANT EXECUTE ON set_user_ctx_pkg TO USER1;
-GRANT EXECUTE ON set_user_ctx_pkg TO USER2;
-GRANT EXECUTE ON set_user_ctx_pkg TO USER3;
-GRANT EXECUTE ON set_user_ctx_pkg TO USER4;
-GRANT EXECUTE ON set_user_ctx_pkg TO USER5;
-GRANT EXECUTE ON set_user_ctx_pkg TO USER6;
-GRANT EXECUTE ON set_user_ctx_pkg TO USER7;
 
 COMMIT;
 /** FIN SCRIPT AFFECTATION PRIVILEGE AUX USERS */
@@ -81,3 +74,13 @@ END set_user_ctx_pkg;
 
 COMMIT;
 /** FIN SCRIPT CREATION CONTEXT APPLICATION */
+                                                             
+GRANT EXECUTE ON set_user_ctx_pkg TO USER1;
+GRANT EXECUTE ON set_user_ctx_pkg TO USER2;
+GRANT EXECUTE ON set_user_ctx_pkg TO USER3;
+GRANT EXECUTE ON set_user_ctx_pkg TO USER4;
+GRANT EXECUTE ON set_user_ctx_pkg TO USER5;
+GRANT EXECUTE ON set_user_ctx_pkg TO USER6;
+GRANT EXECUTE ON set_user_ctx_pkg TO USER7;
+                                                             
+COMMIT;
